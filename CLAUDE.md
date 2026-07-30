@@ -2,6 +2,36 @@
 
 A macOS app for previewing Markdown files. AppKit, sandboxed, ships with a Quick Look extension. Updates via Sparkle, distributed via Amore.
 
+## Read this first
+
+🔴 **Read this file and `docs/AGENT_HANDOFF.md` in full. Everything else is REFERENCE — search it, do
+not read it front to back.**
+
+This file is auto-loaded every session, so everything in it is paid on every question asked of this repo.
+
+| | |
+|---|---|
+| **This file** | Invariants: project facts, release pipeline, Amore config, known issues. |
+| `docs/AGENT_HANDOFF.md` | Live state and whose turn it is. Authoritative over everything else. Protocol: `~/.claude/HANDOFF.md`. |
+| `README.md` | What this app is, written for a human. |
+| `Journal.md` | Session narrative — the WHY. Read the **most recent entry**; `grep` for older. Past ~20k tokens, archive older entries to `docs/journal/`. |
+| `CHANGELOG.md` | Shipped user-facing changes per version. Reach for it when cutting a release — `scripts/release.sh` refuses to run without an entry for the target version. |
+
+⚠️ **If a doc contradicts the baton, the baton wins.** The baton is rewritten every session; the rest
+are not.
+
+## 🔴 Where session narrative goes
+
+**Session write-ups go in `Journal.md`, never in this file.**
+
+The test for anything added here: **would an agent be WRONG without this, today?** A structure, a rule,
+a release command, an API shape — yes. A story about a fix, a dated status update, a "last updated"
+note — no, that is `Journal.md`.
+
+*(Spelled out because a sibling project's `CLAUDE.md` instructed every session to append to it and
+reached 5,009 lines / ~77,000 auto-loaded tokens, 4,090 of them dated write-ups — paid on every
+question, forever.)*
+
 ## Project facts
 
 | Thing | Value |
